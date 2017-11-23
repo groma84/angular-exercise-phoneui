@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'theme';
+@import 'mixins';
+
+@include google-font($headline_font);
+@include google-font($text_font);
+
+body {
+  font-family: $text_font;
+  font-size: 15px;
+  background-color: black;
+  color: $theme_color_medium;
+  border: 1px solid white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline_font;
+  color: $theme_color_accent;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}

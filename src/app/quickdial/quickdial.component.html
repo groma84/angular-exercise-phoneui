@@ -1,0 +1,18 @@
+<div class="quickdial__container">
+  <section class="quickdial__last-calls-container">
+    <h2>Letzte Anrufe</h2>
+    <ol class="quickdial__list">
+      <li *ngFor="let call of recentCalls">
+        <app-recent-call-info [recentCall]="call"></app-recent-call-info>
+      </li>
+    </ol>
+  </section>
+  <section class="quickdial__frequent-contacts-container">
+    <h2>Häufig angerufen</h2>
+    <ol class="quickdial__list">
+      <li *ngFor="let contactCall of frequentContacts">
+        <app-contact-list-item [contactCall]="contactCall"></app-contact-list-item>
+      </li>
+    </ol>
+  </section>
+</div>

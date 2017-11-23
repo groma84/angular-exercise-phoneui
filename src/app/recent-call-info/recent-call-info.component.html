@@ -1,0 +1,10 @@
+<div class="recent-call__container">
+  <img [src]="recentCall.contact.imageUrl" alt="Bild von {{recentCall.name}}">
+  <div class="recent-call__text-container">
+    <div>{{recentCall.name}}</div>
+    <div>
+      <span>{{getDirectionText(recentCall.call.direction)}}</span>
+      <span>{{getDateText(recentCall.call.startedAtTimestampUtc)}}</span>
+    </div>
+  </div>
+</div>

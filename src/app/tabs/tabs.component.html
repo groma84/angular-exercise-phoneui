@@ -1,0 +1,18 @@
+<div class="content__wrapper">
+  <nav>
+    <ul class="content-navigation__tabs">
+      <li class="content-navigation__item" routerLinkActive="content-navigation__item--active">
+        <a [routerLink]="'quickdial'">Schnellwahl</a>
+      </li>
+      <li class="content-navigation__item" routerLinkActive="content-navigation__item--active">
+        <a [routerLink]="'contacts'">Kontakte</a>
+      </li>
+      <li class="content-navigation__item" routerLinkActive="content-navigation__item--active">
+        <a [routerLink]="'dial'">Nummer wählen</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="content__inner-content">
+    <router-outlet></router-outlet>
+  </section>
+</div>

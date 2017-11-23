@@ -1,0 +1,30 @@
+@import '../../theme';
+
+$spacing: 2rem;
+$min-width: 20rem;
+
+.quickdial__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quickdial__last-calls-container {
+  border-right: 1px solid $theme_color_medium;
+  padding-right: $spacing;
+  min-width: $min-width;
+  margin-bottom: $spacing;
+}
+
+.quickdial__frequent-contacts-container {
+  padding-left: $spacing;
+  min-width: $min-width;
+  margin-bottom: $spacing;
+}
+
+.quickdial__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
