@@ -8,11 +8,12 @@ import { MainRouterModule } from './main-router/main-router.module';
 
 import { ContactHistoryService } from './contact-history.service';
 import { ContactDetailsService } from './contact-details.service';
+import { TimeConvertService } from './time-convert.service';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, FormsModule, HttpModule, MainRouterModule],
-  providers: [ContactHistoryService, ContactDetailsService],
+  providers: [ContactHistoryService, ContactDetailsService, TimeConvertService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

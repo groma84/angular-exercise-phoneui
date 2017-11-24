@@ -37,6 +37,7 @@ export class QuickdialComponent implements OnInit {
       const fullName = contact.firstName + ' ' + contact.lastName;
       return {
         name: fullName,
+        contact: contact,
         phoneNumber: contact.phoneNumbers.find(
           pn => pn.phoneNumberId === call.calledContactPhoneNumberId
         )

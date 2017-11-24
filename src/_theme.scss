@@ -6,3 +6,6 @@ $theme_color_highlight: #00dffc;
 
 $headline_font: 'Montserrat';
 $text_font: 'Raleway';
+
+$transparent-highlight-border: 1px solid
+  transparentize($color: $theme_color_highlight, $amount: 0.8);

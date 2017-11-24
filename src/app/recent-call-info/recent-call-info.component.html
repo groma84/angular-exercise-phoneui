@@ -1,6 +1,6 @@
 <div class="recent-call__container recent-call__container--{{index}}">
   <img [style.background-image]="'url(' + recentCall.contact.imageUrl + ')'" class="recent-call__contact-image">
-  <div class="recent-call__text-container">
+  <div>
     <div class="recent-call__contact-name">{{recentCall.name}}</div>
     <div class="recent-call__call-info">
       <span>{{getDirectionText(recentCall.call.direction)}}</span>

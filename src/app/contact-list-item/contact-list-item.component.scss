@@ -1,0 +1,27 @@
+@import '../../theme';
+@import '../../mixins';
+
+.contact-list-item__container {
+  display: flex;
+  align-items: center;
+
+  border-bottom: $transparent-highlight-border;
+}
+
+// das ist ein Hack, um dem ersten Eintrag einen oberen Rand zu verpassen, ohne
+// style in der übergeordneten Komponente eintragen zu müssen
+.contact-list-item__container--0 {
+  border-top: $transparent-highlight-border;
+}
+
+.contact-list-item__contact-image {
+  @include small-contact-image(6rem);
+}
+
+.contact-list-item__contact-name {
+  @include contact-name;
+}
+
+.contact-list-item__phone-number {
+  padding-top: 0.5rem;
+}

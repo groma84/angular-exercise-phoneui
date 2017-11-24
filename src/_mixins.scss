@@ -3,3 +3,23 @@
 
   @import url(https://fonts.googleapis.com/css?family=#{$font});
 }
+
+@mixin small-contact-image($size) {
+  max-width: $size;
+  width: $size;
+  max-height: $size;
+  height: $size;
+
+  padding: 1rem;
+
+  display: block;
+  background-clip: content-box;
+  background-size: contain;
+  background-position: center;
+  border-radius: 2rem;
+}
+
+@mixin contact-name() {
+  font-weight: bold;
+  font-size: 1.25rem;
+}

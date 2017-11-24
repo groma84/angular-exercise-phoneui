@@ -1,36 +1,25 @@
 @import '../../theme';
-
-$border: 1px solid transparentize($color: $theme_color_highlight, $amount: 0.8);
+@import '../../mixins';
 
 .recent-call__container {
   display: flex;
   align-items: center;
 
-  border-bottom: $border;
+  border-bottom: $transparent-highlight-border;
 }
 
 // das ist ein Hack, um dem ersten Eintrag einen oberen Rand zu verpassen, ohne
 // style in der übergeordneten Komponente eintragen zu müssen
 .recent-call__container--0 {
-  border-top: $border;
+  border-top: $transparent-highlight-border;
 }
 
 .recent-call__contact-image {
-  max-width: 6rem;
-  width: 6rem;
-  max-height: 6rem;
-  height: 6rem;
-  padding: 1rem;
-  background-clip: content-box;
-  background-size: contain;
-  background-position: center;
-  display: block;
-  border-radius: 2rem;
+  @include small-contact-image(6rem);
 }
 
 .recent-call__contact-name {
-  font-weight: bold;
-  font-size: 1.25rem;
+  @include contact-name;
 }
 
 .recent-call__call-info {

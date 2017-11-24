@@ -10,8 +10,8 @@
   <section class="quickdial__frequent-contacts-container">
     <h2>Häufig angerufen</h2>
     <ol class="quickdial__list">
-      <li *ngFor="let contactCall of frequentContacts">
-        <app-contact-list-item [contactCall]="contactCall"></app-contact-list-item>
+      <li *ngFor="let contactCall of frequentContacts; let i = index">
+        <app-contact-list-item [contactCall]="contactCall" [index]="i"></app-contact-list-item>
       </li>
     </ol>
   </section>
