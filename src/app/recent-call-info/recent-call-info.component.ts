@@ -10,6 +10,7 @@ import * as moment from 'moment-timezone';
 })
 export class RecentCallInfoComponent implements OnInit {
   @Input() recentCall;
+  @Input() index;
 
   constructor() {}
 

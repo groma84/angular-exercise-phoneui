@@ -2,8 +2,8 @@
   <section class="quickdial__last-calls-container">
     <h2>Letzte Anrufe</h2>
     <ol class="quickdial__list">
-      <li *ngFor="let call of recentCalls">
-        <app-recent-call-info [recentCall]="call"></app-recent-call-info>
+      <li *ngFor="let call of recentCalls; let i = index">
+        <app-recent-call-info [recentCall]="call" [index]="i"></app-recent-call-info>
       </li>
     </ol>
   </section>
