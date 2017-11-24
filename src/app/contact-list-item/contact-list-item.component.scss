@@ -2,10 +2,7 @@
 @import '../../mixins';
 
 .contact-list-item__container {
-  display: flex;
-  align-items: center;
-
-  border-bottom: $transparent-highlight-border;
+  @include quickdial-clickable-container;
 }
 
 // das ist ein Hack, um dem ersten Eintrag einen oberen Rand zu verpassen, ohne

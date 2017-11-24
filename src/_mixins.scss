@@ -23,3 +23,15 @@
   font-weight: bold;
   font-size: 1.25rem;
 }
+
+@mixin quickdial-clickable-container() {
+  display: flex;
+  align-items: center;
+
+  border-bottom: $transparent-highlight-border;
+  cursor: pointer;
+
+  &:hover {
+    color: $theme_color_accent;
+  }
+}
