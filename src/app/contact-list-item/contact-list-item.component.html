@@ -1,4 +1,4 @@
-<div class="contact-list-item__container contact-list-item__container--{{index}}">
+<div class="contact-list-item__container contact-list-item__container--{{index}}" (click)="contactListItemClick(contactCall)">
   <img [style.background-image]="'url(' + contactCall.contact.imageUrl + ')'" class="contact-list-item__contact-image">
   <div>
     <div class="contact-list-item__contact-name">{{contactCall.name}} ({{getPhoneNumberTypeText(contactCall.phoneNumber.type)}})</div>

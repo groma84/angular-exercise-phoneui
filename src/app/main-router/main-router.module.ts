@@ -6,6 +6,7 @@ import { TabsComponent } from '../tabs/tabs.component';
 import { QuickdialComponent } from '../quickdial/quickdial.component';
 import { RecentCallInfoComponent } from '../recent-call-info/recent-call-info.component';
 import { ContactListItemComponent } from '../contact-list-item/contact-list-item.component';
+import { QuickdialContactDetailsOverlayComponent } from '../quickdial-contact-details-overlay/quickdial-contact-details-overlay.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
   declarations: [
     TabsComponent,
     QuickdialComponent,
+    QuickdialContactDetailsOverlayComponent,
     RecentCallInfoComponent,
     ContactListItemComponent
   ]

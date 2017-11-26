@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactHistoryService } from '../contact-history.service';
 import { ContactDetailsService } from '../contact-details.service';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-quickdial',
@@ -10,6 +11,9 @@ import { ContactDetailsService } from '../contact-details.service';
 export class QuickdialComponent implements OnInit {
   contactDetailsService: ContactDetailsService;
   contactHistoryService: ContactHistoryService;
+
+  showContactDetailsOverlay: boolean;
+  contactDetailsOverlayData: Contact;
 
   recentCalls = [];
   frequentContacts = [];
@@ -43,5 +47,14 @@ export class QuickdialComponent implements OnInit {
         )
       };
     });
+  }
+
+  openContactDetails(contactId) {
+    this.contactDetailsOverlayData = this.contactDetailsService.getContactDetails(contactId);
+    this.showContactDetailsOverlay = true;
+  }
+
+  closeContactDetails() {
+    this.showContactDetailsOverlay = false;
   }
 }

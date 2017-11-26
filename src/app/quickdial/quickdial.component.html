@@ -3,7 +3,7 @@
     <h2>Letzte Anrufe</h2>
     <ol class="quickdial__list">
       <li *ngFor="let call of recentCalls; let i = index">
-        <app-recent-call-info [recentCall]="call" [index]="i"></app-recent-call-info>
+        <app-recent-call-info [recentCall]="call" [index]="i" (recentCallClicked)="openContactDetails($event)"></app-recent-call-info>
       </li>
     </ol>
   </section>
@@ -11,8 +11,11 @@
     <h2>Häufig angerufen</h2>
     <ol class="quickdial__list">
       <li *ngFor="let contactCall of frequentContacts; let i = index">
-        <app-contact-list-item [contactCall]="contactCall" [index]="i"></app-contact-list-item>
+        <app-contact-list-item [contactCall]="contactCall" [index]="i" (contactListItemClicked)="openContactDetails($event)"> </app-contact-list-item>
       </li>
     </ol>
   </section>
+  <div *ngIf="showContactDetailsOverlay" class="quickdial__contact-details-overlay-background">
+    <app-quickdial-contact-details-overlay [contact]="contactDetailsOverlayData" (closeOverlay)="closeContactDetails()"></app-quickdial-contact-details-overlay>
+  </div>
 </div>

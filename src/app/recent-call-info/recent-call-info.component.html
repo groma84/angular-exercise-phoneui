@@ -1,4 +1,4 @@
-<div class="recent-call__container recent-call__container--{{index}}">
+<div class="recent-call__container recent-call__container--{{index}}" (click)="recentCallClick(recentCall)">
   <img [style.background-image]="'url(' + recentCall.contact.imageUrl + ')'" class="recent-call__contact-image">
   <div>
     <div class="recent-call__contact-name">{{recentCall.name}}</div>

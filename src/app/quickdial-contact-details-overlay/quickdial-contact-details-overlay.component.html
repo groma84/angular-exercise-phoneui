@@ -1,0 +1,21 @@
+<div class="quickdial__contact-details-overlay-background">
+  <div class="quickdial__contact-details-overlay-content">
+    <div>
+      <div>
+        <h3>{{contact.firstName}} {{contact.lastName}}</h3>
+        <img [style.background-image]="'url(' + contact.imageUrl + ')'" class="quickdial__contact-details-overlay-contact-image">
+      </div>
+      <div>
+        <ol>
+          <li *ngFor="let phone of contact.phoneNumbers" (click)="onPhoneNumberClicked(phone.phoneNumberId)" [ngClass]="{'quickdial__contact-details-overlay-phone-number--active': activePhoneNumberId === phone.phoneNumberId }">
+            {{phone.number}} {{getPhoneNumberTypeText(phone.type)}}
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div>
+      <button type="button">Jetzt anrufen</button>
+      <button type="button" (click)="onCancelClicked()">Zurück</button>
+    </div>
+  </div>
+</div>
