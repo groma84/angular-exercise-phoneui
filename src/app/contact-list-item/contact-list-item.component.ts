@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { PhoneNumberType } from '../phone-number-type.enum';
+import { PhoneNumberFormatterService } from '../phone-number-formatter.service';
 
 @Component({
   selector: 'app-contact-list-item',
@@ -9,21 +10,21 @@ import { PhoneNumberType } from '../phone-number-type.enum';
 export class ContactListItemComponent implements OnInit {
   @Input() contactCall;
   @Input() index;
+  @Output() contactListItemClicked = new EventEmitter<number>();
 
-  constructor() {}
+  phoneNumberFormatterService: PhoneNumberFormatterService;
+
+  constructor(phoneNumberFormatterService: PhoneNumberFormatterService) {
+    this.phoneNumberFormatterService = phoneNumberFormatterService;
+  }
 
   ngOnInit() {}
 
-  getPhoneNumberTypeText(type: PhoneNumberType) {
-    switch (type) {
-      case PhoneNumberType.Cellphone:
-        return 'Mobil';
-      case PhoneNumberType.Home:
-        return 'Zuhause';
-      case PhoneNumberType.Landline:
-        return 'Festnetz';
-      case PhoneNumberType.Work:
-        return 'Geschäftlich';
-    }
+  getPhoneNumberTypeText(type) {
+    return this.phoneNumberFormatterService.getPhoneNumberTypeText(type);
+  }
+
+  contactListItemClick(item) {
+    this.contactListItemClicked.emit(item.contact.contactId);
   }
 }

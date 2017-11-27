@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CallDirection } from '../call-direction.enum';
-
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import * as moment from 'moment-timezone';
+
+import { CallDirection } from '../call-direction.enum';
 import { TimeConvertService } from '../time-convert.service';
 import { timeout } from 'q';
 
@@ -13,6 +13,7 @@ import { timeout } from 'q';
 export class RecentCallInfoComponent implements OnInit {
   @Input() recentCall;
   @Input() index;
+  @Output() recentCallClicked = new EventEmitter<number>();
 
   timeConvertService: TimeConvertService;
 
@@ -33,5 +34,9 @@ export class RecentCallInfoComponent implements OnInit {
 
   getDateText(timestamp) {
     return this.timeConvertService.getDateText(timestamp);
+  }
+
+  recentCallClick(call) {
+    this.recentCallClicked.emit(call.contact.contactId);
   }
 }
