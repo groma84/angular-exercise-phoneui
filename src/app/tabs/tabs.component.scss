@@ -1,11 +1,16 @@
 @import '../../theme';
+@import '../../functions';
 
 .content__wrapper {
   display: flex;
   flex-direction: column;
 
-  width: 100%;
+  width: getMaxContentWidth();
   height: 100%;
+}
+
+.content-navigation__container {
+  height: $header-height;
 }
 
 .content-navigation__tabs {
@@ -34,6 +39,5 @@
 }
 
 .content__inner-content {
-  width: 100%;
-  height: 100%;
+  /* margin-left: 5rem; */
 }

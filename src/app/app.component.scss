@@ -1,8 +1,13 @@
+@import '../theme';
+@import '../functions';
+
 #main {
   display: flex;
 
-  margin: 0rem 5rem;
+  margin: 0rem $content-margin;
 
-  width: 1440px;
-  height: 810px;
+  max-width: getMaxContentWidth();
+  max-height: $content-height;
+
+  overflow: auto;
 }

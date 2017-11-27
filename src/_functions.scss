@@ -1,1 +1,9 @@
+@import 'theme';
 
+@function getMaxContentHeight() {
+  @return ($content-height - $header-height);
+}
+
+@function getMaxContentWidth() {
+  @return ($content-width - $content-margin * 2);
+}

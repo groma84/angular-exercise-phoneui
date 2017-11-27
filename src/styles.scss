@@ -11,6 +11,11 @@ body {
   background-color: black;
   color: $theme_color_medium;
   border: 1px solid white;
+
+  margin: 0rem $content-margin;
+
+  width: $content-width;
+  height: $content-height;
 }
 
 h1,

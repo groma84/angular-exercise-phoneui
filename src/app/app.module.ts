@@ -10,9 +10,10 @@ import { ContactHistoryService } from './contact-history.service';
 import { ContactDetailsService } from './contact-details.service';
 import { TimeConvertService } from './time-convert.service';
 import { PhoneNumberFormatterService } from './phone-number-formatter.service';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContactListComponent],
   imports: [BrowserModule, FormsModule, HttpModule, MainRouterModule],
   providers: [
     ContactHistoryService,

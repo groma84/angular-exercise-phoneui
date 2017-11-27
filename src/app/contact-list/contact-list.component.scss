@@ -1,0 +1,25 @@
+@import '../../theme';
+@import '../../mixins';
+@import '../../functions';
+
+.contact-list__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  max-height: getMaxContentHeight();
+}
+
+.contact-list__item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.contact-list__item-image {
+  @include small-contact-image(6rem);
+}
+
+.contact-list__item-name {
+  @include contact-name;
+}
