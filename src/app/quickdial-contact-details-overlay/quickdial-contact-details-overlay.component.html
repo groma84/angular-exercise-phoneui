@@ -2,20 +2,21 @@
   <div class="quickdial__contact-details-overlay-content">
     <div>
       <div>
-        <h3>{{contact.firstName}} {{contact.lastName}}</h3>
-        <img [style.background-image]="'url(' + contact.imageUrl + ')'" class="quickdial__contact-details-overlay-contact-image">
+        <h3 class="quickdial__contact-details-overlay-name">{{contact.firstName}} {{contact.lastName}}</h3>
       </div>
-      <div>
-        <ol>
+      <div class="quickdial__contact-details-overlay-name-and-numbers">
+        <img [style.background-image]="'url(' + contact.imageUrl + ')'" class="quickdial__contact-details-overlay-contact-image">
+        <ol class="quickdial__contact-details-overlay-numbers-list">
           <li *ngFor="let phone of contact.phoneNumbers" (click)="onPhoneNumberClicked(phone.phoneNumberId)" [ngClass]="{'quickdial__contact-details-overlay-phone-number--active': activePhoneNumberId === phone.phoneNumberId }">
             {{phone.number}} {{getPhoneNumberTypeText(phone.type)}}
           </li>
         </ol>
       </div>
+      <div class="quickdial__contact-details-overlay-selected-phone-number">{{selectedPhoneNumber || "Bitte wählen Sie eine Nummer."}}</div>
     </div>
-    <div>
-      <button type="button">Jetzt anrufen</button>
-      <button type="button" (click)="onCancelClicked()">Zurück</button>
+    <div class="quickdial__contact-details-overlay-button-container">
+      <button type="button" [disabled]="!selectedPhoneNumber" class="quickdial__contact-details-overlay-call-button">Jetzt anrufen</button>
+      <button type="button" (click)="onCancelClicked()" class="quickdial__contact-details-overlay-back-button">Zurück</button>
     </div>
   </div>
 </div>

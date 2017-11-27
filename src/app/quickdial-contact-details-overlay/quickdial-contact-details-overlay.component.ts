@@ -14,6 +14,7 @@ export class QuickdialContactDetailsOverlayComponent implements OnInit {
   phoneNumberFormatterService: PhoneNumberFormatterService;
 
   activePhoneNumberId: number;
+  selectedPhoneNumber: string;
 
   constructor(phoneNumberFormatterService: PhoneNumberFormatterService) {
     this.phoneNumberFormatterService = phoneNumberFormatterService;
@@ -31,5 +32,9 @@ export class QuickdialContactDetailsOverlayComponent implements OnInit {
 
   onPhoneNumberClicked(phoneNumberId) {
     this.activePhoneNumberId = phoneNumberId;
+
+    this.selectedPhoneNumber = this.contact.phoneNumbers.find(
+      pn => pn.phoneNumberId === phoneNumberId
+    ).number;
   }
 }
