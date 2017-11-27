@@ -44,4 +44,9 @@ export class QuickdialComponent implements OnInit {
       };
     });
   }
+
+  // TODO:
+  // Click-handler auf den einzelnen Einträgen
+  // bei Click: Lade Kontaktdaten, belege Input-Objekt, zeige via ngIf ein Overlay an (transition? animation?)
+  // Overlay (Component) siehe Pencil Sketch
 }
