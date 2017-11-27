@@ -8,6 +8,7 @@ import { RecentCallInfoComponent } from '../recent-call-info/recent-call-info.co
 import { ContactListItemComponent } from '../contact-list-item/contact-list-item.component';
 import { QuickdialContactDetailsOverlayComponent } from '../quickdial-contact-details-overlay/quickdial-contact-details-overlay.component';
 import { ContactListComponent } from '../contact-list/contact-list.component';
+import { DialNumberComponent } from '../dial-number/dial-number.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'contacts',
         component: ContactListComponent
+      },
+      {
+        path: 'dial',
+        component: DialNumberComponent
       }
     ]
   },
@@ -44,7 +49,8 @@ const routes: Routes = [
     QuickdialContactDetailsOverlayComponent,
     RecentCallInfoComponent,
     ContactListComponent,
-    ContactListItemComponent
+    ContactListItemComponent,
+    DialNumberComponent
   ]
 })
 export class MainRouterModule {}
