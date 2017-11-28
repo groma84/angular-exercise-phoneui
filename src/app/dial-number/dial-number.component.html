@@ -1,20 +1,23 @@
-<div>
-  <div>
-    <span>Eingegebene Nummer</span>
-    <span>
-      backspace </span>
+<div class="dial-number__container">
+  <div class="dial-number__number-container">
+    <span class="dial-number__dialed-number">{{dialedNumber}}</span>
+    <button type="button" class="dial-number__backspace-button" (click)="onBackspaceClicked()">
+      <i class="material-icons ">backspace</i>
+    </button>
   </div>
   <div class="dial-number__numpad">
-    <span>1</span>
-    <span>2</span>
-    <span>3</span>
-    <span>4</span>
-    <span>5</span>
-    <span>6</span>
-    <span>7</span>
-    <span>8</span>
-    <span>9</span>
-    <span class="dial-number__num0">0</span>
-    <button type="button" class="dial-number__call-button">anrufen</button>
+    <span (click)="onNumberClicked(1)">1</span>
+    <span (click)="onNumberClicked(2)">2</span>
+    <span (click)="onNumberClicked(3)">3</span>
+    <span (click)="onNumberClicked(4)">4</span>
+    <span (click)="onNumberClicked(5)">5</span>
+    <span (click)="onNumberClicked(6)">6</span>
+    <span (click)="onNumberClicked(7)">7</span>
+    <span (click)="onNumberClicked(8)">8</span>
+    <span (click)="onNumberClicked(9)">9</span>
+    <span class="dial-number__num0" (click)="onNumberClicked(0)">0</span>
+    <button type="button" class="dial-number__call-button">
+      <i id="dial-number__call-button" class="material-icons">call</i>
+    </button>
   </div>
 </div>
